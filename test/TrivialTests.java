@@ -63,4 +63,20 @@ public class TrivialTests {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void jugador_sale_de_la_carcel(){
+        Game sut = new Game();
+        sut.agregar("Luis");
+        sut.agregar("Pepe");
+
+        sut.tirarDado(1);
+        sut.respuestaIncorrecta();
+        sut.tirarDado(1);
+        sut.fueRespuestaCorrecta();
+        sut.tirarDado(1);
+
+        boolean actual = sut.estaEnLaCarcel("Maria");
+
+        Assertions.assertFalse(actual);
+    }
 }
