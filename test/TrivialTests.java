@@ -48,4 +48,19 @@ public class TrivialTests {
         Assertions.assertEquals(expected, actual);
 
     }
+    @Test
+    public void maximo_6_jugadores(){
+        Game sut = new Game();
+        sut.agregar("María");
+        sut.agregar("Pepe");
+        sut.agregar("Raúl");
+        sut.agregar("Juan");
+        sut.agregar("Estefanía");
+        sut.agregar("Lucia");
+
+        boolean expected = true;
+        boolean actual = sut.esJugable();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }

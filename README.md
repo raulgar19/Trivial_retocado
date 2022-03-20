@@ -7,3 +7,7 @@ Para ello se ha creado un nuevo test que verifique que cuando un jugador saque u
 # Resolución problema 1
 
 Para resolver este problema se han creado dos tests. Uno de ellos que solo agregue un jugador a la partida y otro que agregue 2. De esta manera se confirmará que el test pasa cuando hay mas de dos jugadores mientras que el otro test que solamente agrega 1 jugador falla.
+
+# Resolución problema 2
+
+Para resolver este problema, se crea un test que añada 6 jugadores a la partida. De esta manera devolverá una posición más en el array ya que en vez de guardarse en la posición 0 empieza guardando los datos en la posición 1. Para ello se ha modificado las posiciones del array en el metodo agregar restalonde una posición y asi emp'ezar a contar desde la posición 0 en vez de la 1.
