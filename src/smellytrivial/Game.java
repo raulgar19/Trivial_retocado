@@ -159,7 +159,7 @@ public class Game {
 
         jugadorActual++;
         if (jugadorActual == jugadores.size()) jugadorActual = 0;
-        return true;
+        return false;
     }
 
 

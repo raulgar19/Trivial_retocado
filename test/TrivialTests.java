@@ -79,4 +79,16 @@ public class TrivialTests {
 
         Assertions.assertFalse(actual);
     }
+    @Test
+    public void si_respuesta_es_incorrecta(){
+        Game juego = new Game();
+        juego.agregar("Paco");
+        juego.agregar("Monica");
+
+        juego.tirarDado(3);
+
+        boolean haGanado = juego.respuestaIncorrecta();
+
+        Assertions.assertFalse(haGanado);
+    }
 }

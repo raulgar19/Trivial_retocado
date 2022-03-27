@@ -15,3 +15,7 @@ Para resolver este problema, se crea un test que añada 6 jugadores a la partida
 # Resolución problema 3
 
 Para este problema se ha creado un test que confirme que el jugador sale de la carcel. Al rpincipio este test pasa pero en verdad el jugador no sale de la carcel por lo que se crea un metodo en la clase Game llamado EstaEnLaCarcel(). Con este metodo creamos una comprobación más segura. Al ejecutar el test nuevamente falla ya que el array que devuelve el metodo estaEnLaCarcel() da una posición negativa, por lo que le añadimos un + 1. Al volver a ejecutar el test vueolve a dar error ya que el assertion devuelve diferentes valores. Para ello en el metodo tirarDado se le añade una fila nueva al principio y de esta manera el test pasa sin nungún fallo.
+
+# Resolución problema 4
+
+Para este problema se ha creado un test que corrija que ganador = true. Para que este test pase correctamente, se han modificado los codigos en la clase juego y en el launcher cambiando las devoluciones de true por false y cambiando de nombre la variable noGanador por ganador.
