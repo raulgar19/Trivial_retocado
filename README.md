@@ -19,3 +19,7 @@ Para este problema se ha creado un test que confirme que el jugador sale de la c
 # Resolución problema 4
 
 Para este problema se ha creado un test que corrija que ganador = true. Para que este test pase correctamente, se han modificado los codigos en la clase juego y en el launcher cambiando las devoluciones de true por false y cambiando de nombre la variable noGanador por ganador.
+
+# Resolución problema 5
+
+Para este problema se ha creado un metodo llamado cambioJugador() que contenga el código repetitivo y se ha llamado en su lugar a este nuevo metodo pasandole los parametros necesarios en los métodos de respuesta correcta y resapuesta incorrecta.

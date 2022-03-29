@@ -123,13 +123,11 @@ public class Game {
                         + " monedas doradas.");
 
                 boolean ganador = jugadorHaGanado();
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+               cambioJugador(jugadorActual, jugadores);
 
                 return ganador;
             } else {
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+                cambioJugador(jugadorActual, jugadores);
                 return true;
             }
 
@@ -145,8 +143,7 @@ public class Game {
                     + " monedas doradas.");
 
             boolean ganador = jugadorHaGanado();
-            jugadorActual++;
-            if (jugadorActual == jugadores.size()) jugadorActual = 0;
+            cambioJugador(jugadorActual, jugadores);
 
             return ganador;
         }
@@ -157,8 +154,7 @@ public class Game {
         System.out.println(jugadores.get(jugadorActual)+ " va a la casilla de castigo");
         enCasillaCastigo[jugadorActual] = true;
 
-        jugadorActual++;
-        if (jugadorActual == jugadores.size()) jugadorActual = 0;
+        cambioJugador(jugadorActual, jugadores);
         return false;
     }
 
@@ -177,5 +173,9 @@ public class Game {
     public boolean estaEnLaCarcel(String jugador) {
         int numero = jugadores.indexOf(jugador);
         return enCasillaCastigo[numero + 1];
+    }
+    static void cambioJugador(int jugadorActual, ArrayList jugadores){
+        jugadorActual++;
+        if (jugadorActual == jugadores.size()) jugadorActual = 0;
     }
 }
