@@ -23,3 +23,7 @@ Para este problema se ha creado un test que corrija que ganador = true. Para que
 # Resolución problema 5
 
 Para este problema se ha creado un metodo llamado cambioJugador() que contenga el código repetitivo y se ha llamado en su lugar a este nuevo metodo pasandole los parametros necesarios en los métodos de respuesta correcta y resapuesta incorrecta.
+
+# Resolución problema 6
+
+Para este problema se ha creado el método refactRespuestaCorrecta() donde se ha guardado el código duplicado que imprime si la respuesta del jugador es correcta. En el método fueRespuestaCorrecta() se ha creado un parámetro boolean llamado ganador que se igualará al nuevo método en sus respectivos sitios.

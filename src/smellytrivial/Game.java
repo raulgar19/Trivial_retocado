@@ -113,17 +113,10 @@ public class Game {
     }
 
     public boolean fueRespuestaCorrecta() {
+        boolean ganador;
         if (enCasillaCastigo[jugadorActual]){
             if (estaSaliendoDeLaCarcel) {
-                System.out.println("Respuesta correcta!!!!");
-                monederos[jugadorActual]++;
-                System.out.println(jugadores.get(jugadorActual)
-                        + " ahora tiene "
-                        + monederos[jugadorActual]
-                        + " monedas doradas.");
-
-                boolean ganador = jugadorHaGanado();
-               cambioJugador(jugadorActual, jugadores);
+                ganador = refactRespuestaCorrecta(jugadorActual, monederos, jugadores);
 
                 return ganador;
             } else {
@@ -135,15 +128,7 @@ public class Game {
 
         } else {
 
-            System.out.println("Respuesta correcta!!!!");
-            monederos[jugadorActual]++;
-            System.out.println(jugadores.get(jugadorActual)
-                    + " ahora tiene "
-                    + monederos[jugadorActual]
-                    + " monedas doradas.");
-
-            boolean ganador = jugadorHaGanado();
-            cambioJugador(jugadorActual, jugadores);
+            ganador = refactRespuestaCorrecta(jugadorActual, monederos, jugadores);
 
             return ganador;
         }
@@ -177,5 +162,17 @@ public class Game {
     static void cambioJugador(int jugadorActual, ArrayList jugadores){
         jugadorActual++;
         if (jugadorActual == jugadores.size()) jugadorActual = 0;
+    }
+    boolean refactRespuestaCorrecta(int jugadorActual, int[] monederos, ArrayList jugadores){
+        System.out.println("Respuesta correcta!!!!");
+        monederos[jugadorActual]++;
+        System.out.println(jugadores.get(jugadorActual)
+                + " ahora tiene "
+                + monederos[jugadorActual]
+                + " monedas doradas.");
+
+        boolean ganador = jugadorHaGanado();
+        cambioJugador(jugadorActual, jugadores);
+        return ganador;
     }
 }
