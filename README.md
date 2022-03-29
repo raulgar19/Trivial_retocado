@@ -27,3 +27,7 @@ Para este problema se ha creado un metodo llamado cambioJugador() que contenga e
 # Resolución problema 6
 
 Para este problema se ha creado el método refactRespuestaCorrecta() donde se ha guardado el código duplicado que imprime si la respuesta del jugador es correcta. En el método fueRespuestaCorrecta() se ha creado un parámetro boolean llamado ganador que se igualará al nuevo método en sus respectivos sitios.
+
+# Resolucion problema 7
+
+Para resolver este problema se ha creado un test que verifique que las preguntas van rotando. Al principiop como es de esperar da error ya que las preguntas no se ciclan. Par ello, se ha modificado el codigo en el método hacerPregunta() donde  se ha creado un nuevo parámetro que hace que la primera pregunta pase de la primera posición a la última. De esta manera el test pasa sin problemas.

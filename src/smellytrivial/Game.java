@@ -88,14 +88,27 @@ public class Game {
     }
 
     private void hacerPregunta() {
-        if (categoriaActual() == "Cultura popular")
-            System.out.println(preguntasCultura.removeFirst());
-        if (categoriaActual() == "Ciencias")
+        Object primeraPregunta = null;
+        if (categoriaActual() == "Cultura popular") {
+            primeraPregunta = preguntasCultura.removeFirst();
+            System.out.println(primeraPregunta);
+            preguntasCultura.addLast(primeraPregunta);
+        }
+        if (categoriaActual() == "Ciencias"){
+            primeraPregunta = preguntasCiencias.removeFirst();
             System.out.println(preguntasCiencias.removeFirst());
-        if (categoriaActual() == "Deportes")
+            preguntasCiencias.addLast(primeraPregunta);
+    }
+        if (categoriaActual() == "Deportes"){
+            primeraPregunta = preguntasDeportes.removeFirst();
             System.out.println(preguntasDeportes.removeFirst());
-        if (categoriaActual() == "Música")
+            preguntasDeportes.addLast(primeraPregunta);
+        }
+        if (categoriaActual() == "Música") {
+            primeraPregunta = preguntasMusica.removeFirst();
             System.out.println(preguntasMusica.removeFirst());
+            preguntasMusica.addLast(primeraPregunta);
+        }
     }
 
 
@@ -174,5 +187,9 @@ public class Game {
         boolean ganador = jugadorHaGanado();
         cambioJugador(jugadorActual, jugadores);
         return ganador;
+    }
+
+    public LinkedList getPeguntasDeMusica() {
+        return preguntasMusica;
     }
 }

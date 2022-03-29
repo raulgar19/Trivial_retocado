@@ -91,4 +91,15 @@ public class TrivialTests {
 
         Assertions.assertFalse(haGanado);
     }
+    @Test
+    public void sePuedenAcabarLasPreguntas(){
+        Game juego = new Game();
+        juego.agregar("Raúl");
+        juego.agregar("Luís");
+        String expected = (String) juego.getPeguntasDeMusica().getFirst();
+        juego.tirarDado(1);
+        juego.respuestaIncorrecta();
+        String actual = (String) juego.getPeguntasDeMusica().getLast();
+        Assertions.assertEquals(expected, actual);
+    }
 }
